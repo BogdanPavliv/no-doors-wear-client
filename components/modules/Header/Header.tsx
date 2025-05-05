@@ -159,7 +159,6 @@ const Header = () => {
                   <div className="header__top--content-left">
                     <ul className="header__top--nav-list">
                       <li className="header__top--nav-item">
-
                         <Link 
                           className="header__top--nav-link" 
                           href='/about'>
