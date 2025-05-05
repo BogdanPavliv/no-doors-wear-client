@@ -1,0 +1,71 @@
+.password_restore {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.password_restore__title {
+  text-align: center;
+}
+@media (max-width: 560px) {
+  .password_restore__title {
+    font-size: 32px;
+  }
+}
+.password_restore__spinner {
+  text-align: center;
+}
+.password_restore_form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.password_restore_form__title {
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+@media (max-width: 560px) {
+  .password_restore_form__title {
+    font-size: 22px;
+  }
+}
+.password_restore_form__title span {
+  color: #399A3A;
+}
+.password_restore_form__label {
+  position: relative;
+}
+.password_restore_form__warn {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  color: #FF4747;
+  font-size: 12px;
+}
+.password_restore_form__input {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 24px;
+  padding: 4px 16px 4px 20px;
+  height: 48px;
+  background-color: #F6F7FB;
+  border: none;
+  color: #F1F3F5;
+}
+.password_restore_form__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.password_restore_form__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.password_restore_form__btn {
+  background-color: #399A3A;
+  color: #F1F3F5;
+  border-radius: 24px;
+  transition: background-color 0.2s ease-in-out;
+  height: 48px;
+}
+.password_restore_form__btn:hover {
+  background-color: #328134;
+  transition: background-color 0.2s ease-in-out;
+}/*# sourceMappingURL=index.module.css.map */

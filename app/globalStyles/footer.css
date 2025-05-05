@@ -1,0 +1,181 @@
+.footer {
+  margin-top: auto;
+}
+
+.footer {
+  padding: 30px 0 30px;
+  background-color: #1E1E1E;
+}
+
+.footer__navLink, 
+.footer__contactsLink {
+  color: #FFFFFF;
+}
+
+.footer__inner {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer__title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer__navItem {
+  margin-bottom: 10px;
+}
+
+.footer__navLink {
+  font-size: 16px;
+}
+
+.footer__contactsLink {
+  font-size: 14px;
+}
+
+.footer__privacy-link{
+  font-size: 14px;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: #686868;
+}
+
+.footer__contactsItem {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.call::before, 
+.facebook::before, 
+.instagram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+}
+
+.call::before {
+  background-image: url('/img/call.svg');
+}
+
+.facebook::before {
+  background-image: url('/img/facebook.svg');
+}
+
+.instagram::before {
+  background-image: url('/img/instagram.svg');
+}
+
+.footer__author{
+  display: block;
+  color: #F6F7FB;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer__privacy-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: underline !important;
+  margin-bottom: 15px;
+}
+
+.footer__payment-img-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+@media (max-width: 950px) {
+  .footer .logo__img {
+    width: 120px;
+    height: 116px;
+  }
+
+  .footer__title {
+    text-align: center;
+  }
+
+  .footer__navList {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .footer__contacts {
+    margin-bottom: 40px;
+  }
+
+  .footer__img {
+    margin: 0 auto;
+  }
+
+  .footer__development {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 40px 0 40px;
+  }
+
+  .footer__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .footer__inner {
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .footer__navLink {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline !important;
+  }
+
+  .footer__contactsList {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .footer__contactsLink {
+    font-size: 20px;
+  }
+
+  .footer__contactsItem {
+    margin-bottom: 15px;
+    padding-left: 30px;
+  }
+
+  .call::before, .facebook::before, .instagram::before {
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+  }
+
+  .footer__payment-img-wrapper {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .footer__author {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}

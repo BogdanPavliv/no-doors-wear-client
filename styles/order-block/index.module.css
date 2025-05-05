@@ -1,0 +1,124 @@
+.order_block__inner p:not(:last-child) {
+  margin-bottom: 12px;
+}
+.order_block__inner p:last-child {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333A47;
+  margin-bottom: 24px;
+}
+.order_block__info {
+  margin: 0;
+  color: #181818;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order_block__info__text {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 500;
+}
+.order_block__total {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #1E1E1E;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.order_block__total span:first-child {
+  margin-bottom: 16px;
+}
+.order_block__total__price {
+  color: #16D9A6;
+  font-size: 24px;
+  font-weight: 500;
+}
+.order_block__btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 35px;
+  border-radius: 50px;
+  background-color: #399A3A;
+  transition: background-color 0.2s ease-in-out;
+  color: #F1F3F5;
+  height: 48px;
+  font-size: 16px;
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.order_block__btn:hover {
+  border-radius: 50px;
+  background-color: #328134;
+  transition: background-color 0.2s ease-in-out;
+}
+.order_block__btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.order_block__btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.order_block__agreement {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.order_block__agreement__input {
+  margin-right: 10px;
+  padding: 0;
+  height: 0;
+  width: 0;
+  font-size: 0;
+}
+.order_block__agreement__text {
+  padding-left: 20px;
+  position: relative;
+  color: #1E1E1E;
+  max-width: 280px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+.order_block__agreement__link {
+  color: #399A3A;
+  text-decoration: none;
+}
+.order_block__agreement__checkbox {
+  cursor: pointer;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #399A3A;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  z-index: 1;
+}
+.order_block__agreement__mark {
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 6px;
+  height: 10px;
+  opacity: 0;
+  border: solid #181818;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+input:checked + .order_block__agreement__mark {
+  opacity: 1;
+}/*# sourceMappingURL=index.module.css.map */

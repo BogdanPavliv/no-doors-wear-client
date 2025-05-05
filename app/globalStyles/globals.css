@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Muller Basis;
+  font-weight: 400;
+  background-color: #fff;
+  color: #181818;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1535px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.slick-slide {
+  margin: 0 9px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.duration {
+  transition-duration: 2s;
+}
+
+.site-title {
+  margin: 0;
+  margin-bottom: 40px;
+  color: #181818;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Muller Basis;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../public/fonts/Muller-Trial-Bold.woff') format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Muller Basis;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../public/fonts/Muller-Trial-Medium.woff') format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Muller Basis;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../public/fonts/Muller-Trial-Regular.woff') format("woff");
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+  padding-right: 8px;
+}
+
+.nextjs-toast {
+  display: none !important;
+}
+
+.header__search-overlay,
+.quick-view-modal-overlay,
+.size-table-overlay,
+.auth-overlay,
+.share-overlay {
+  background: #16181b;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.header__search-overlay.overlay-active,
+.quick-view-modal-overlay.overlay-active,
+.size-table-overlay.overlay-active,
+.auth-overlay.overlay-active,
+.share-overlay.overlay-active {
+  opacity: 0.6;
+  visibility: visible;
+}
+
+.header__search-overlay.overlay-active {
+  z-index: 101;
+}
+
+.share-overlay.overlay-active {
+  z-index: 101;
+}
+
+.quick-view-modal-overlay.overlay-active {
+  z-index: 5;
+}
+
+.auth-overlay.overlay-active, .size-table-overlay.overlay-active {
+  z-index: 100;
+}
+
+.auth-overlay.overlay-active, .size-table-overlay.overlay-active {
+  z-index: 100;
+}
+
+.not-empty {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: #ED0000;
+  border-radius: 50%;
+}
+
+.not-empty-mobile {
+  top: 12px;
+  right: 15px;
+}
+
+.not-empty-mobile-favorite {
+  top: 12px;
+  right: 25px;
+}

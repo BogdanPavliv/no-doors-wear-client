@@ -1,0 +1,33 @@
+.watched {
+  padding-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.watched__title {
+  margin: 0;
+  color: #181818;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+@media (max-width: 650px) {
+  .watched__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 590px) {
+  .watched__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    max-width: 200px;
+  }
+}
+.watched__inner {
+  position: relative;
+}
+.watched__inner > a:first-child {
+  right: 10px;
+}
+.watched__slider {
+  margin-right: -15px;
+}/*# sourceMappingURL=index.module.css.map */
