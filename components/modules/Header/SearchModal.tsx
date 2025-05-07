@@ -125,7 +125,7 @@ const SearchModal = () => {
         <div className='search-modal__bottom'>
           {(spinner) && (
             <motion.span className='search-modal__spinner' {...basePropsForMotion}>
-              <FontAwesomeIcon icon={faSpinner} spin color='#fff' size='3x' />
+              <FontAwesomeIcon icon={faSpinner} spin color='#181818' size='3x' />
             </motion.span>
           )}
           {!spinner && (

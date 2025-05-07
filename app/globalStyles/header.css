@@ -70,8 +70,26 @@
 .header__bottom--search {
   max-width: 665px;
   width: 100%;
+}
 
+.header__bottom--search-wrapper, 
+.header__bottom--search-content {
   position: relative;
+}
+
+.header__bottom--search-result {
+  position: absolute;
+  bottom: -975%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 10px 20px;
+  z-index: 1;
+  box-shadow: 0px 3px 10px 0px #0000001A;
+}
+
+.header__bottom--search-result .search-modal__links {
+  width: 100%;
 }
 
 .header__input {
@@ -138,6 +156,11 @@
 .header__bottom--icon-compare::before {
   -webkit-mask: url("/img/comparison.svg") no-repeat 50% 50%;
   mask: url("/img/comparison.svg") no-repeat 50% 50%;
+}
+
+.header__bottom--icon-search::before {
+  -webkit-mask: url("/img/search.svg") no-repeat 50% 50%;
+  mask: url("/img/search.svg") no-repeat 50% 50%;
 }
 
 .header__bottom--icon-favorites::before {

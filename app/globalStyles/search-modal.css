@@ -5,7 +5,7 @@
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333A47;
+  background-color: #F6F7FB;
   padding: 24px;
   z-index: 101;
 }
@@ -74,12 +74,12 @@
 
 .search-modal__input {
   width: 100%;
-  border: none;
-  background: rgba(255, 255, 255, 0.06);
   height: 48px;
+  border: 2px solid #399a3a;
+  border-radius: 4px;
   padding-left: 20px;
   overflow: hidden;
-  color: rgba(255, 255, 255, 0.90);
+  color: #181818;
   padding-top: 18px;
 }
 
@@ -88,7 +88,7 @@
   left: 20px;
   top: 12px;
   pointer-events: none;
-  color: rgba(255, 255, 255, 0.40);
+  color: #181818;
   transition: top .2s ease-in-out, font-size .2s ease-in-out, color .2s ease-in-out;
 }
 

@@ -5,6 +5,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect } from 'react'
 import Menu from './Menu'
+import SearchInput from './SearchInput'
 import { openMenu, openSearchModal } from '@/context/modals'
 import {
   addOverflowHiddenToBody,
@@ -237,14 +238,26 @@ const Header = () => {
                   <div className="header__bottom--logo">
                     <Logo />
                   </div>
-                  {!isMedia991 && 
-                    <div className="header__bottom--search">
-                      <input className="header__input" type="text" />
-                      <button className="header__serach--button">Знайти</button>
-                    </div>
+                  {!isMedia991 &&
+                    <SearchInput /> 
                   }
                   <div className="header__bottom--actions">
                     <ul className="header__bottom--list">
+                      {isMedia991 && 
+                        <li className="header__bottom--item">
+                          <div className="header__bottom--icon header__bottom--icon-search">
+                                
+                          </div>
+                          <div className="header__bottom--text">
+                            <button
+                              className='header__links__item__btn header__links__item__btn--search'
+                              onClick={handleOpenSearchModal}
+                            >
+                              Знайти
+                            </button>
+                          </div>
+                        </li>
+                      }
                       <li className="header__bottom--item">
                         <div className="header__bottom--icon header__bottom--icon-favorites">
                           {!!currentFavoritesByAuth.length && (<span className='not-empty' />)}
