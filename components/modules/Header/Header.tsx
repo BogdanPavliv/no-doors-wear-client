@@ -240,17 +240,19 @@ const Header = () => {
                         <a href="" className="header__top--actions-btn">+38 (050) 237-44-49</a>
                       </li>
                     }
-                    <li className="header__top--actions-item">
-                      <div className="header__top--actions-select-wrapper">
-                        <div className={`${selectedLanguage ? 'header__top--actions-select-title active' : 'header__top--actions-select-title'}`} ref={selectTitleRef} onClick={handleSwitchSelect}></div>
-                        {selectedLanguage && 
-                          (<div className="header__top--actions-options" id="language">
-                            <div className="header__top--actions-option" ref={selectOptionUaRef} onClick={handleSwitchLangToUa}>Українська</div>
-                            <div className="header__top--actions-option" ref={selectOptionEnRef} onClick={handleSwitchLangToEn}>English</div>
-                          </div>)
-                        }
-                      </div>
-                    </li>
+                    {!isMedia991 &&
+                     (<li className="header__top--actions-item">
+                        <div className="header__top--actions-select-wrapper">
+                          <div className={`${selectedLanguage ? 'header__top--actions-select-title active' : 'header__top--actions-select-title'}`} ref={selectTitleRef} onClick={handleSwitchSelect}></div>
+                          {selectedLanguage && 
+                            (<div className="header__top--actions-options" id="language">
+                              <div className="header__top--actions-option" ref={selectOptionUaRef} onClick={handleSwitchLangToUa}>Українська</div>
+                              <div className="header__top--actions-option" ref={selectOptionEnRef} onClick={handleSwitchLangToEn}>English</div>
+                            </div>)
+                          }
+                        </div>
+                      </li>)
+                    }
                     <li className="header__top--actions-item">
                       <Link 
                         className="header__bottom--icon header__bottom--icon-compare" 
