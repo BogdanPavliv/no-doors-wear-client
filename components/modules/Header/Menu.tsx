@@ -28,7 +28,7 @@ const Menu = () => {
     localStorage.setItem('lang', JSON.stringify(lang))
   }
 
-  const handleSwitchLangToRu = () => handleSwitchLang('ua')
+  const handleSwitchLangToUa = () => handleSwitchLang('ua')
   const handleSwitchLangToEn = () => handleSwitchLang('en')
 
   const handleShowCatalogList = () => setActiveListId(1)
@@ -140,7 +140,7 @@ const Menu = () => {
             className={`btn-reset nav-menu__lang__btn ${
               lang === 'ua' ? 'lang-active' : ''
             }`}
-            onClick={handleSwitchLangToRu}
+            onClick={handleSwitchLangToUa}
           >
             UA
           </button>

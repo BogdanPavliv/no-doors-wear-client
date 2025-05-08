@@ -1,4 +1,5 @@
 'use client'
+import { MutableRefObject, useState, useRef } from "react";
 import Link from 'next/link'
 import { useUnit } from 'effector-react'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
@@ -22,6 +23,7 @@ import {
   setCartFromLS,
   setShouldShowEmpty,
 } from '@/context/cart'
+import { AllowedLangs } from '@/constants/lang'
 import { setLang } from '@/context/lang'
 import {
   addProductsFromLSToFavorites,
@@ -41,6 +43,10 @@ import { $comparison, $comparisonFromLs } from '@/context/comparison/state'
 import { $cart, $cartFromLs } from '@/context/cart/state'
 
 const Header = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState(false);
+  const selectTitleRef = useRef() as MutableRefObject<HTMLDivElement>
+  const selectOptionUaRef = useRef() as MutableRefObject<HTMLDivElement>
+  const selectOptionEnRef = useRef() as MutableRefObject<HTMLDivElement>
   const isAuth = useUnit($isAuth)
   const loginCheckSpinner = useUnit(loginCheckFx.pending)
   const { lang, translations } = useLang()
@@ -59,6 +65,43 @@ const Header = () => {
     openSearchModal()
     addOverflowHiddenToBody()
   }
+
+  const handleSwitchSelect = () => {
+    setSelectedLanguage(selectedLanguage => !selectedLanguage)
+  }
+
+  const handleSwitchLang = (lang: string) => {
+    if (lang ==='ua') {
+      setLang(lang as AllowedLangs)
+      localStorage.setItem('lang', JSON.stringify(lang))
+
+      const langChosen = JSON.parse(localStorage.getItem('lang') as string)
+      console.log(langChosen);
+      
+      selectTitleRef.current.textContent = langChosen && 'Українська'
+    } else {
+      setLang(lang as AllowedLangs)
+      localStorage.setItem('lang', JSON.stringify(lang))
+
+      const langChosen = JSON.parse(localStorage.getItem('lang') as string)
+      selectTitleRef.current.textContent = langChosen && 'English'
+    }
+    
+  }
+  
+  const handleSwitchLangToUa = () => handleSwitchLang('ua')
+  const handleSwitchLangToEn = () => handleSwitchLang('en')
+
+  useEffect(()=> {
+    console.log(selectTitleRef.current.textContent);
+    const langChosen = JSON.parse(localStorage.getItem('lang') as string)
+    console.log(langChosen);
+      if (langChosen === 'ua') {
+        selectTitleRef.current.textContent = langChosen && 'Українська'
+      } else {
+        selectTitleRef.current.textContent = langChosen && 'English'
+      }
+  }, [])
 
   useEffect(() => {
     const auth = JSON.parse(localStorage.getItem('auth') as string)
@@ -197,6 +240,17 @@ const Header = () => {
                         <a href="" className="header__top--actions-btn">+38 (050) 237-44-49</a>
                       </li>
                     }
+                    <li className="header__top--actions-item">
+                      <div className="header__top--actions-select-wrapper">
+                        <div className={`${selectedLanguage ? 'header__top--actions-select-title active' : 'header__top--actions-select-title'}`} ref={selectTitleRef} onClick={handleSwitchSelect}></div>
+                        {selectedLanguage && 
+                          (<div className="header__top--actions-options" id="language">
+                            <div className="header__top--actions-option" ref={selectOptionUaRef} onClick={handleSwitchLangToUa}>Українська</div>
+                            <div className="header__top--actions-option" ref={selectOptionEnRef} onClick={handleSwitchLangToEn}>English</div>
+                          </div>)
+                        }
+                      </div>
+                    </li>
                     <li className="header__top--actions-item">
                       <Link 
                         className="header__bottom--icon header__bottom--icon-compare" 
