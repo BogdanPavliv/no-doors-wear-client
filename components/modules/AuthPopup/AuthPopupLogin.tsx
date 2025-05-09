@@ -18,7 +18,6 @@ const AuthPopupLogin = ({ toggleAuth }: IAuthSideProps) => {
     // isSideActive,
     // handleSignIn
   )
-  console.log(singInFx.pending);
   
   const submitForm = (data: IInputs) =>
     handleSignIn({
