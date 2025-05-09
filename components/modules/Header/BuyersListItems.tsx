@@ -15,24 +15,16 @@ const BuyersListItems = () => {
         </Link>
       </li>
       <li className='nav-menu__accordion__item'>
-        <Link href='/blog' className='nav-menu__accordion__item__link'>
-          {translations[lang].main_menu.blog}
+        <Link href='/delivery' className='nav-menu__accordion__item__link'>
+          {translations[lang].main_menu.delivery}
         </Link>
       </li>
       <li className='nav-menu__accordion__item'>
         <Link
-          href='/shipping-and-payment'
+          href='/guarantees'
           className='nav-menu__accordion__item__link'
         >
-          {translations[lang].main_menu.shipping}
-        </Link>
-      </li>
-      <li className='nav-menu__accordion__item'>
-        <Link
-          href='/purchase-returns'
-          className='nav-menu__accordion__item__link'
-        >
-          {translations[lang].main_menu.returns}
+          {translations[lang].main_menu.guarantees}
         </Link>
       </li>
     </>

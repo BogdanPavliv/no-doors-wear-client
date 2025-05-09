@@ -3,11 +3,14 @@ import LogoFooter from '@/components/elements/LogoFooter/LogoFooter'
 
 import FooterContacts from "./FooterContacts"
 import FooterPayment from "./FooterPayment"
+import { useLang } from '@/hooks/useLang'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 type Props = {}
 
 const Footer = (props: Props) => {
+  const { lang, translations } = useLang()
+
   const isMedia950 = useMediaQuery(950)
   const isMedia640 = useMediaQuery(640)
 
@@ -19,34 +22,34 @@ const Footer = (props: Props) => {
               <LogoFooter/>
             </div>
             <div className="footer__nav">
-              <h3 className="footer__title">Навігація</h3>
+              <h3 className="footer__title">{translations[lang].footer.navigation}</h3>
               <ul className='footer__navList'>
                 <li className="footer__navItem">
                   <Link 
                     className="footer__navLink" 
                     href='/about'>
-                      Про компанію
+                      {translations[lang].footer.about}
                   </Link>
                 </li>
                 <li className="footer__navItem">
                   <Link 
                     className="footer__navLink" 
                     href='/delivery'>
-                      Доставка та оплата
+                      {translations[lang].footer.delivery}
                   </Link>
                 </li>
                 <li className="footer__navItem">
                   <Link 
                     className="footer__navLink" 
                     href='/guarantees'>
-                      Гарантії
+                      {translations[lang].footer.guarantees}
                   </Link>
                 </li>
                 <li className="footer__navItem">
                   <Link 
                     className="footer__navLink" 
                     href='/contacts'>
-                      Контакти
+                      {translations[lang].footer.contacts}
                   </Link>
                 </li>
               </ul>
@@ -56,10 +59,10 @@ const Footer = (props: Props) => {
             {!isMedia950 && <FooterContacts />}
             {!isMedia950 && <FooterPayment />}
             <div className="footer__development">
-              <h3 className="footer__title">Розробка сайту</h3>
+              <h3 className="footer__title">{translations[lang].footer.development}</h3>
               <a className="footer__author" href="">Bogdan Pavliv</a>
               <Link href='/privacy-policy' className="footer__privacy-link">
-                Політика конфіденційності
+                {translations[lang].footer.privacy}
               </Link>
               <div className="footer__copyright">
                 No Doors Technology © 2025

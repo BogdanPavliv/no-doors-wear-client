@@ -48,12 +48,11 @@
       "souvenirs": "Souvenirs",
       "office": "Office",
       "all": "All catalog",
-      "about": "About",
-      "blog": "Blog",
-      "shipping": "Shipping and payment",
-      "returns": "Purchase returns",
-      "tg": "Telegram",
-      "vk": "VKontakte"
+      "about": "About the company",
+      "delivery": "Delivery and payment",
+      "guarantees": "Guarantees",
+      "facebook": "Facebook",
+      "instagram": "Instagram"
     },
     "comparison": {
       "umbrella": "Umbrellas",
@@ -91,11 +90,14 @@
       "collection_products": "Products by Collection"
     },
     "footer": {
-      "copyright": "«NO DOORS» All rights reserved",
-      "policy": "Data processing policy",
+      "about": "About the company",
+      "delivery": "Delivery and payment",
+      "guarantees": "Guarantees",
+      "contacts": "Contacts",
+      "navigation": "Navigation",
+      "development": "Website development",
       "privacy": "Privacy policy",
-      "mobile_version": "Mobile version",
-      "full_version": "Full version of the site"
+      "payment": "Payment methods"
     },
     "main_page": {
       "hero_hidden_title": "Clothing store NO DOORS",
@@ -321,12 +323,11 @@
       "souvenirs": "Сувеніри",
       "office": "Канцелярія",
       "all": "Весь каталог",
-      "about": "Про нас",
-      "blog": "Блог",
-      "shipping": "Доставка та оплата",
-      "returns": "Повернення товару",
-      "tg": "Телеграм",
-      "vk": "Вконтакте"
+      "about": "Про компанію",
+      "delivery": "Доставка та оплата",
+      "guarantees": "Гарантії",
+      "facebook": "Фейсбук",
+      "instagram": "Інстаграм"
     },
     "comparison": {
       "umbrella": "Парасолі",
@@ -364,11 +365,14 @@
       "collection_products": "Товари по колекції"
     },
     "footer": {
-      "copyright": "«NO NOORS» Усі права захищені",
-      "policy": "Політика обробки даних",
+      "about": "Про компанію",
+      "delivery": "Доставка та оплата",
+      "guarantees": "Гарантії",
+      "contacts": "Контакти",
+      "navigation": "Навігація",
+      "development": "Розробка сайту",
       "privacy": "Політика конфіденційності",
-      "mobile_version": "Мобільна версія",
-      "full_version": "Повна версія сайту"
+      "payment": "Способи оплати"
     },
     "main_page": {
       "hero_hidden_title": "Магазин одягу NO DOORS",

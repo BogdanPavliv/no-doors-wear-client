@@ -76,7 +76,6 @@ const Header = () => {
       localStorage.setItem('lang', JSON.stringify(lang))
 
       const langChosen = JSON.parse(localStorage.getItem('lang') as string)
-      console.log(langChosen);
       
       selectTitleRef.current.textContent = langChosen && 'Українська'
     } else {
@@ -93,9 +92,7 @@ const Header = () => {
   const handleSwitchLangToEn = () => handleSwitchLang('en')
 
   useEffect(()=> {
-    console.log(selectTitleRef.current.textContent);
     const langChosen = JSON.parse(localStorage.getItem('lang') as string)
-    console.log(langChosen);
       if (langChosen === 'ua') {
         selectTitleRef.current.textContent = langChosen && 'Українська'
       } else {
@@ -206,28 +203,28 @@ const Header = () => {
                         <Link 
                           className="header__top--nav-link" 
                           href='/about'>
-                            Про компанію
+                            {translations[lang].main_menu.about}
                         </Link>
                       </li>
                       <li className="header__top--nav-item">
                         <Link 
                           className="header__top--nav-link" 
                           href='/delivery'>
-                            Доставка та оплата
+                            {translations[lang].main_menu.delivery}
                         </Link>
                       </li>
                       <li className="header__top--nav-item">
                         <Link 
                           className="header__top--nav-link" 
                           href='/guarantees'>
-                            Гарантії
+                            {translations[lang].main_menu.guarantees}
                         </Link>
                       </li>
                       <li className="header__top--nav-item">
                         <Link 
                           className="header__top--nav-link" 
                           href='/contacts'>
-                            Контакти
+                            {translations[lang].main_menu.contacts}
                         </Link>
                       </li>
                     </ul>
