@@ -240,8 +240,7 @@ const Header = () => {
                         <a href="" className="header__top--actions-btn">+38 (050) 237-44-49</a>
                       </li>
                     }
-                    {!isMedia991 &&
-                     (<li className="header__top--actions-item">
+                    <li className="header__top--actions-item">
                         <div className="header__top--actions-select-wrapper">
                           <div className={`${selectedLanguage ? 'header__top--actions-select-title active' : 'header__top--actions-select-title'}`} ref={selectTitleRef} onClick={handleSwitchSelect}></div>
                           {selectedLanguage && 
@@ -251,8 +250,7 @@ const Header = () => {
                             </div>)
                           }
                         </div>
-                      </li>)
-                    }
+                    </li>
                     <li className="header__top--actions-item">
                       <Link 
                         className="header__bottom--icon header__bottom--icon-compare" 
