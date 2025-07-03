@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧢 No Doors Wear — Client
 
-## Getting Started
+**No Doors Wear** — це клієнтська частина сучасного eCommerce-застосунку для бренду одягу. Побудовано на базі **Next.js 14**, з інтеграцією мап від TomTom, функціональністю онлайн-магазину, поштою, завантаженням зображень, SEO-оптимізацією та повноцінною інтеграцією з back-end (MongoDB + JWT).
 
-First, run the development server:
+## ⚙️ Технологічний стек
 
-```bash
+- **Next.js 14**
+- **React 18 + TypeScript**
+- **Effector**
+- **MongoDB + Mongoose**
+- **Multer, Nodemailer**
+- **TomTom Maps SDK**
+- **Framer Motion, Swiper, React Slick**
+- **React Hook Form, React Share**
+- **JWT Auth**
+
+## 🚀 Основні особливості
+
+- 🛒 Повноцінний інтерфейс магазину з пагінацією та категоріями
+- 🔐 Авторизація через JWT (`jsonwebtoken` + `bcryptjs`)
+- 🌍 **TomTom Maps SDK** — пошук і відображення мап у формі доставки
+- 📤 Завантаження зображень через `multer` та серверне збереження
+- 📩 Відправка пошти за допомогою `nodemailer`
+- 🎥 Анімовані елементи за допомогою `framer-motion`
+- 🔄 Нескінченний скролінг / пагінація через `react-paginate`
+- 📱 Кнопки поширення в соцмережах через `react-share`
+- 🧩 UI-компоненти на базі FontAwesome, Swiper, React Slick
+- 📝 Форми з валідацією на базі `react-hook-form`
+- 🔥 Нотифікації через `react-hot-toast`
+- 🧠 Ефективний state-менеджмент через `effector` і `effector-react`
+
+## 📦 Встановлення
+
+bash
+git clone https://github.com/BogdanPavliv/no-doors-wear-client.git
+cd no-doors-wear-client
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Команди
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Скрипт          | Опис                                           |
+| --------------- | ---------------------------------------------- |
+| `npm run dev`   | Запускає локальний сервер Next.js для розробки |
+| `npm run build` | Створює продакшен-білд за допомогою Next.js    |
+| `npm run start` | Запускає продакшен-версію сервера              |
+| `npm run lint`  | Запускає аналіз коду за допомогою ESLint       |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Розгортання
 
-## Learn More
+[Watch demo](https://no-doors-shop-client.netlify.app/)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+👨‍💻 Автор
+Богдан Павлів — Frontend Developer
+📧 [bogdan.pavliv@gmail.com]
+🌐 [My portfolio](https://bogdan-pavliv.netlify.app)
